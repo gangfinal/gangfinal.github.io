@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>레이아웃</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #f2f2f2;
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        width: 100%;
+        background: white;
+        padding: 20px;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+.left-menu img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.logo-title h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.right-menu {
+    display: flex;
+    gap: 70px;
+}
+
+    main {
+        width: 95%;
+        max-width: 1400px;
+        margin: 10px auto;
+        display: grid;
+        gap: 20px;
+    }
+
+  
+    .top-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+
+   
+    .wide-img {
+        width: 100%;
+        aspect-ratio: 3 / 1;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+   
+    .bottom-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+   
+    footer {
+    width: 100%;
+    background: #ffffff;
+    padding: 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+  
+    .img-box {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 900px) {
+        .top-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .bottom-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+   #main_header{
+    width: 100%;
+    padding: 20px 0;    
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.main-top-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.logo-title h1 { 
+    font-size: 2.5rem; 
+    font-weight: 1000;
+    margin: 0;  }
+
+    .footer-img {
+    width: 100%;
+    height: auto;
+    display: block;
+     border-radius: 10px;
+}
+
+.img-wrap {
+    position: relative;
+    width: 100%;
+}
+
+
+.img-btn {
+    position: absolute;
+    bottom: 100px;
+    left: 89%;
+    transform: translateX(-50%);
+    padding: 8px 8px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+
+
+.btn-small {
+     left: 95%;
+    padding: 8px px;
+    font-size: 0.8rem;}
+
+    div a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+div a:visited {
+    color: rgb(0, 0, 0);
+}
+
+div a:hover {
+    color: #d10000;
+}
+
+div a:active {
+    color: white;
+}
+
+</style>
+</head>
+<body>
+
+<header> 
+    <div class="left-menu">
+        <a href="index.html"><img src="logo.png"></a>
+    </div>
+
+    <div class="logo-title">
+        <h1>JAPOOD, 일식이란 천국에 빠져보는 시간.</h1>
+    </div>
+
+    <nav class="right-menu">
+        <div><a href="index2.html">Gallery</a></div>
+        <div><a href="index3.html">Origin</a></div>
+        <div><a href="index4.html">Video</a></div>
+        <div><a href="index5.html">Ranking</a></div>
+        <div><a href="index6.html">Recipe</a></div>
+    </nav> 
+</header>
+
+
+<main>
+
+  <div class="img-wrap">
+    <img src="헤더상단.png" class="main-top-img">
+  
+  </div>
+
+  <section class="top-grid">
+
+      <div class="img-wrap">
+         <div><img src="갤러리표지.jpg" class="img-box"></div>
+       <button class="img-btn btn-small"><a href="index2.html">사진</a></button>
+      </div>
+
+      <div class="img-wrap">
+        <img src="랭킹.jpg" class="img-box">
+        <button class="img-btn"><a href="index4.html">랭킹</a></button>
+      </div>
+
+  </section>
+
+  <section>
+    <div class="img-wrap">
+        <img src="유래표지.jpg" class="wide-img">
+        <button class="img-btn btn-small"><a href="index3.html">유래</a></button>
+    </div>
+  </section>
+
+  <section class="bottom-grid">
+
+      <div class="img-wrap">
+        <img src="영상표지.jpg" class="img-box">
+         <button class="img-btn btn-small"><a href="index4.html">영상</a></button>
+      </div>
+
+      <div class="img-wrap">
+        <img src="요리법표지.jpg" class="img-box">
+          <button class="img-btn btn-small"><a href="index5.html">요리법</a></button>
+      </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <img src="푸터이미지.jpg" class="footer-img">
+</footer>
+
+</body>
+</html>

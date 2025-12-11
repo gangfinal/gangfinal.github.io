@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>레이아웃</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #f2f2f2;
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        width: 100%;
+        background: white;
+        padding: 20px;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+     
+    .img-box {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+.left-menu img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.logo-title h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.right-menu {
+    display: flex;
+    gap: 70px;
+}
+
+  main {
+        width: 95%;
+        max-width: 1400px;
+        margin: 10px auto;
+        display: grid;
+        gap: 20px;
+    }
+
+
+   
+    footer {
+    width: 100%;
+    background: #ffffff;
+    padding: 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+  
+    @media (max-width: 900px) {
+        .top-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .bottom-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+   #main_header{
+    width: 100%;
+    padding: 20px 0;  
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.main-top-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 10px; 
+
+}
+
+.logo-title h1 { 
+    font-size: 2.5rem;  
+    font-weight: 1000;
+    margin: 0;  }
+
+    .footer-img {
+    width: 100%;
+    height: auto;
+    display: block;
+     border-radius: 10px;
+}
+
+.gallery {
+    width: 100%;
+    max-width: 1200px;  
+    margin: 0 auto;      
+    padding: 20px;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+
+.gallery-item:hover img {
+    filter: brightness(50%);
+}
+
+
+.caption {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    padding: 20px 20px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    opacity: 0;
+    transition: 0.4s;
+    pointer-events: none;
+}
+
+.gallery-item:hover .caption {
+    opacity: 1;
+}
+
+
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}
+div a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+div a:visited {
+    color: rgb(0, 0, 0);
+}
+
+div a:hover {
+    color: #d10000; 
+}
+
+div a:active {
+    color: white;
+}
+
+
+.video-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+
+}
+
+.video-player {
+    
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    outline: none;
+    background: #000;
+}
+
+.videos-list {
+  width: 95%;
+  max-width: 1100px;
+  margin: 30px auto;
+  display: block;
+  gap: 0;
+}
+
+
+.video-item {
+  width: 100%;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+
+.video-player {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9; 
+  display: block;
+  border-radius: 12px;
+  background: #000;
+  outline: none;
+}
+
+
+.video-embed {
+  width: 100%;
+}
+
+
+.video-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+  margin: 14px 0 8px;
+}
+
+.video-desc {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 0 0;
+  line-height: 1.5;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+}
+
+
+.section-text {
+  max-width: 900px;
+  margin: 10px auto 40px;
+  text-align: center;
+  color: #444;
+  font-size: 1rem;
+  padding: 0 10px;
+}
+
+
+@media (max-width: 700px) {
+  .video-item {
+    margin-bottom: 50px;
+  }
+  .video-title {
+    font-size: 1.1rem;
+  }
+  .video-desc {
+    font-size: 0.95rem;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header> 
+    <div class="left-menu">
+      <a href="index.html"><img src="logo.png"></a>
+    </div>
+
+    <div class="logo-title">
+        <h1>JAPOOD, 일식이란 천국에 빠져보는 시간.</h1>
+    </div>
+
+      <nav class="right-menu">
+        <div><a href="index2.html">Gallery</a></div>
+        <div><a href="index3.html">Origin</a></div>
+        <div><a href="index4.html">Video</a></div>
+        <div><a href="index5.html">Ranking</a></div>
+        <div><a href="index6.html">Recipe</a></div>
+    </nav> 
+</header>
+
+
+<main>
+    <div class="img-wrap">
+        <img src="헤더상단4.png" class="main-top-img">
+  <section class="videos-list">
+
+    
+    <article class="video-item">
+      <video controls class="video-player">
+        <source src="ㅇ1.mp4" type="video/mp4">
+      
+      </video>
+      <h3 class="video-title">새우초밥</h3>
+    </article>
+      <article class="video-item">
+      <video controls class="video-player">
+        <source src="ㅇ2.mp4" type="video/mp4">
+       
+      </video>
+      <h3 class="video-title"> 애비텐우동</h3>
+    </article>
+
+      <article class="video-item">
+      <video controls class="video-player">
+        <source src="ㅇ3.mp4" type="video/mp4">
+      
+      </video>
+      <h3 class="video-title">가라아게</h3>
+
+    </article>
+  <article class="video-item">
+      <video controls class="video-player">
+        <source src="ㅇ4.mp4" type="video/mp4">
+      
+      </video>
+      <h3 class="video-title">야끼소바</h3>
+      
+    </article>
+  <article class="video-item">
+      <video controls class="video-player">
+        <source src="ㅇ5.mp4" type="video/mp4">
+  
+      </video>
+      <h3 class="video-title">소바</h3>
+    
+    </article>
+
+
+  
+  </section>
+</main>
+
+
+<footer>
+  <img src="푸터이미지.jpg" class="footer-img">
+</footer>
+
+</body>
+</html>
